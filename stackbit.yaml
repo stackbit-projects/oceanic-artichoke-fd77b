@@ -1,0 +1,334 @@
+stackbitVersion: ~0.3.0
+ssgName: hugo
+publishDir: public
+dataDir: data
+pagesDir: content
+assets:
+  referenceType: static
+  staticDir: static
+  uploadDir: assets
+  publicPath: /
+models:
+  color:
+    type: data
+    label: Color
+    file: color.toml
+    fields:
+      - type: string
+        name: dark_active_font_color
+        label: Dark Active Font Color
+      - type: string
+        name: dark_link_color
+        label: Dark Link Color
+      - type: string
+        name: dark_link_hover_color
+        label: Dark Link Hover Color
+      - type: string
+        name: dark_nav_logo_color
+        label: Dark Nav Logo Color
+      - type: string
+        name: dark_nav_menu_color
+        label: Dark Nav Menu Color
+      - type: string
+        name: dark_nav_icon_color
+        label: Dark Nav Icon Color
+      - type: string
+        name: light_active_font_color
+        label: Light Active Font Color
+      - type: string
+        name: light_link_color
+        label: Light Link Color
+      - type: string
+        name: light_link_hover_color
+        label: Light Link Hover Color
+      - type: string
+        name: light_nav_logo_color
+        label: Light Nav Logo Color
+      - type: string
+        name: light_nav_menu_color
+        label: Light Nav Menu Color
+      - type: string
+        name: light_nav_icon_color
+        label: Light Nav Icon Color
+  flowchartjs:
+    type: data
+    label: Flowchartjs
+    file: flowchartjs.json
+    fields:
+      - type: number
+        name: x
+        label: X
+        subtype: int
+      - type: number
+        name: 'y'
+        label: 'Y'
+        subtype: int
+      - type: number
+        name: line-width
+        label: Line Width
+        subtype: int
+      - type: number
+        name: line-length
+        label: Line Length
+        subtype: int
+      - type: number
+        name: text-margin
+        label: Text Margin
+        subtype: int
+      - type: number
+        name: font-size
+        label: Font Size
+        subtype: int
+      - type: string
+        name: font-color
+        label: Font Color
+      - type: string
+        name: line-color
+        label: Line Color
+      - type: string
+        name: element-color
+        label: Element Color
+      - type: string
+        name: fill
+        label: Fill
+      - type: string
+        name: yes-text
+        label: Yes Text
+      - type: string
+        name: no-text
+        label: No Text
+      - type: string
+        name: arrow-end
+        label: Arrow End
+      - type: number
+        name: scale
+        label: Scale
+        subtype: int
+      - type: object
+        name: symbols
+        label: Symbols
+        fields:
+          - type: object
+            name: start
+            label: Start
+            fields:
+              - type: string
+                name: font-color
+                label: Font Color
+              - type: string
+                name: element-color
+                label: Element Color
+              - type: string
+                name: fill
+                label: Fill
+          - type: object
+            name: end
+            label: End
+            fields:
+              - type: string
+                name: class
+                label: Class
+      - type: object
+        name: flowstate
+        label: Flowstate
+        fields:
+          - type: object
+            name: past
+            label: Past
+            fields:
+              - type: string
+                name: fill
+                label: Fill
+              - type: number
+                name: font-size
+                label: Font Size
+                subtype: int
+          - type: object
+            name: current
+            label: Current
+            fields:
+              - type: string
+                name: fill
+                label: Fill
+              - type: string
+                name: font-color
+                label: Font Color
+              - type: string
+                name: font-weight
+                label: Font Weight
+          - type: object
+            name: future
+            label: Future
+            fields:
+              - type: string
+                name: fill
+                label: Fill
+          - type: object
+            name: request
+            label: Request
+            fields:
+              - type: string
+                name: fill
+                label: Fill
+          - type: object
+            name: invalid
+            label: Invalid
+            fields:
+              - type: string
+                name: fill
+                label: Fill
+          - type: object
+            name: approved
+            label: Approved
+            fields:
+              - type: string
+                name: fill
+                label: Fill
+              - type: number
+                name: font-size
+                label: Font Size
+                subtype: int
+              - type: string
+                name: yes-text
+                label: Yes Text
+              - type: string
+                name: no-text
+                label: No Text
+          - type: object
+            name: rejected
+            label: Rejected
+            fields:
+              - type: string
+                name: fill
+                label: Fill
+              - type: number
+                name: font-size
+                label: Font Size
+                subtype: int
+              - type: string
+                name: yes-text
+                label: Yes Text
+              - type: string
+                name: no-text
+                label: No Text
+  font:
+    type: data
+    label: Font
+    file: font.toml
+    fields:
+      - type: string
+        name: title_font
+        label: Title Font
+      - type: string
+        name: content_font
+        label: Content Font
+  lib:
+    type: data
+    label: Lib
+    file: lib.toml
+    fields:
+      - type: object
+        name: js
+        label: Js
+        fields:
+          - type: object
+            name: mermaid
+            label: Mermaid
+            fields:
+              - type: string
+                name: sri
+                label: Sri
+              - type: string
+                name: url
+                label: Url
+          - type: object
+            name: katex
+            label: Katex
+            fields:
+              - type: string
+                name: sri
+                label: Sri
+              - type: string
+                name: url
+                label: Url
+          - type: object
+            name: katex_auto_render
+            label: Katex Auto Render
+            fields:
+              - type: string
+                name: sri
+                label: Sri
+              - type: string
+                name: url
+                label: Url
+          - type: object
+            name: flowchartjs
+            label: Flowchartjs
+            fields:
+              - type: string
+                name: sri
+                label: Sri
+              - type: string
+                name: url
+                label: Url
+          - type: object
+            name: raphael
+            label: Raphael
+            fields:
+              - type: string
+                name: sri
+                label: Sri
+              - type: string
+                name: url
+                label: Url
+          - type: object
+            name: mathjax
+            label: Mathjax
+            fields:
+              - type: string
+                name: url
+                label: Url
+          - type: object
+            name: chart
+            label: Chart
+            fields:
+              - type: string
+                name: sri
+                label: Sri
+              - type: string
+                name: url
+                label: Url
+          - type: object
+            name: viz
+            label: Viz
+            fields:
+              - type: string
+                name: sri
+                label: Sri
+              - type: string
+                name: url
+                label: Url
+          - type: object
+            name: viz_render
+            label: Viz Render
+            fields:
+              - type: string
+                name: sri
+                label: Sri
+              - type: string
+                name: url
+                label: Url
+      - type: object
+        name: css
+        label: Css
+        fields:
+          - type: object
+            name: katex
+            label: Katex
+            fields:
+              - type: string
+                name: sri
+                label: Sri
+              - type: string
+                name: url
+                label: Url
